@@ -1,20 +1,72 @@
-<div class="m-login">
-  <div>
-    <h3 i18n="@@MINDS__HOME__LOGIN__LOGIN">Login to Minds</h3>
-    <minds-form-login
-      (done)="loggedin()"
-      (doneRegistered)="registered()"
-    ></minds-form-login>
+<div class="fo-login">
+  <div class="fo-login-left-web">
+    <div class="left-inner-box">
+      <div class="login-left-inner">
+        <div class="login-left-li">
+          <img src="{{ minds.cdn_assets_url }}assets/icons/fo-heart.png" />
+          <p>Interact with your favorite influencers</p>
+        </div>
+        <div class="login-left-li">
+          <img src="{{ minds.cdn_assets_url }}assets/icons/fo-badge.png" />
+          <p>Access premium photos and videos</p>
+        </div>
+        <div class="login-left-li">
+          <img src="{{ minds.cdn_assets_url }}assets/icons/fo-chat.png" />
+          <p>Direct message anybody, anytime</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-left-copyright">
+      <p>Copyright 2019-2020. All Rights Reserved</p>
+    </div>
   </div>
 
-  <div>
-    <h3 i18n="@@M__COMMON__START_A_CHANNEL_MINDS_REF">
-      Not on Minds? Start a Minds channel
-    </h3>
-    <minds-form-register
-      [referrer]="referrer"
-      (done)="registered()"
-      parentId="/login"
-    ></minds-form-register>
+  <div class="fo-login-right">
+    <div class="right-container">
+      <div class="right-cover">
+        <div class="rect left"></div>
+        <div class="rect right"></div>
+        <div class="brandname mobile">
+          <h3><span class="fans">Fans</span>Only</h3>
+          <p>A community with no boundaries</p>
+        </div>
+      </div>
+
+      <div class="login-box">
+        <div class="brandname web">
+          <h3><span class="fans">Fans</span>Only</h3>
+          <p>A community with no boundaries</p>
+        </div>
+
+        <div class="inputform">
+          <div class="mobile-title"><p>Login</p></div>
+          <minds-form-login
+            (done)="loggedin()"
+            (doneRegistered)="registered()"
+          ></minds-form-login>
+        </div>
+
+        <div>
+          <div class="noaccount">
+            <button class="m-btn" routerLink="/register">
+              Don’t have an account? Sign up
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-footer">
+        <div class="mobile">
+          <p>Disclaimers</p>
+        </div>
+
+        <div class="web">
+          <div>Privacy Policy</div>
+          <div>|</div>
+          <div>Cookie Policy</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

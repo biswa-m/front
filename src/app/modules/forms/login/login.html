@@ -74,7 +74,7 @@
         type="text"
         id="username"
         formControlName="username"
-        placeholder="Username"
+        placeholder="Email"
         i18n-placeholder="@@M__COMMON__USERNAME"
         autocomplete="username"
         (keydown.enter)="login(); $event.preventDefault();"
@@ -92,16 +92,7 @@
         (keydown.enter)="login(); $event.preventDefault();"
       />
     </div>
-  </div>
 
-  <div class="mdl-card__actions">
-    <button
-      class="m-btn m-btn--action m-btn--login"
-      (click)="login()"
-      [disabled]="inProgress"
-    >
-      <ng-container i18n="@@M__ACTION__LOGIN">Login</ng-container>
-    </button>
     <a
       class="mdl-card__subtitle-text mdl-color-text--blue-grey-300 m-reset-password-link"
       [routerLink]="['/forgot-password']"
@@ -110,6 +101,27 @@
         >Forgot Password?</ng-container
       >
     </a>
+  </div>
+
+  <div class="mdl-card__actions">
+    <button
+      class="m-btn btn-login-custom"
+      (click)="login()"
+      [disabled]="inProgress"
+    >
+      <ng-container i18n="@@M__ACTION__LOGIN">Login</ng-container>
+    </button>
+  </div>
+
+  <div class="mdl-card__actions">
+    <button
+      class="m-btn btn-login-twitter"
+      (click)="login()"
+      [disabled]="inProgress"
+    >
+      <img src="{{ minds.cdn_assets_url }}assets/icons/twitter.png" />
+      <ng-container>Connect with Twitter</ng-container>
+    </button>
   </div>
 </form>
 <!-- END: LOGIN -->

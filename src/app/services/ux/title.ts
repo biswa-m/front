@@ -4,7 +4,7 @@ import { SiteService } from '../../common/services/site.service';
 export class MindsTitle {
   private counter: number;
   private sep = ' | ';
-  private default_title = 'Minds';
+  private default_title = 'Fans Only';
   private text: string = '';
 
   static _(title: Title, site: SiteService) {

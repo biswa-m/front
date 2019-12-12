@@ -13,6 +13,11 @@ m-body {
     margin-top: 52px;
   }
 
+  &.not-logged-in {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
   &.is-pro-domain {
     margin-top: 0;
     padding-bottom: 0;

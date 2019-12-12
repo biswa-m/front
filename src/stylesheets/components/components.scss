@@ -44,7 +44,7 @@
       text-transform: uppercase;
       letter-spacing: 4px;
       font-size: 14px;
-      font-family: 'Roboto', Helvetica;
+      font-family: 'Avenir', 'Roboto', Helvetica;
     }
   }
   input[type='file'] {
@@ -735,7 +735,7 @@ svg.m-facebook-icon {
   &:after {
     content: 'M';
 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Avenir', 'Roboto', sans-serif;
     font-weight: 700;
     text-decoration: line-through;
     font-style: normal;

@@ -8,7 +8,7 @@
     "preinstall": "git config core.hooksPath .git/hooks/",
     "prebuild": "gulp build.sass",
     "build": "ng build --prod",
-    "prebuild-dev": "gulp build.sass --deploy-url=http://localhost/en",
+    "prebuild-dev": "gulp build.sass --deploy-url=http://localhost:8080/en",
     "build-dev": "ng build --output-path dist/en --deploy-url=/en/ --watch=true --poll=800",
     "serve-dev": "ng serve --host=0.0.0.0 --deploy-url=/en/ --configuration=hmr --hmr --poll=800 --progress",
     "test": "ng test",

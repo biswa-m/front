@@ -1,5 +1,5 @@
 <ng-container *ngIf="ready">
-  <ng-container *ngIf="!isProDomain">
+  <ng-container *ngIf="!isProDomain && session.isLoggedIn()">
     <m-v2-topbar *mIfFeature="'top-feeds'; else legacyTopbar">
       <ng-container search>
         <m-search--bar [defaultSizes]="false"></m-search--bar>
@@ -31,6 +31,7 @@
 
   <m-body
     [class.has-v2-navbar]="featuresService.has('top-feeds')"
+    [class.not-logged-in]="!session.isLoggedIn()"
     [class.is-pro-domain]="isProDomain"
   >
     <m-announcement [id]="'blockchain:sale'" *ngIf="false">

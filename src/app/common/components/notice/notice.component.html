@@ -1,8 +1,9 @@
 <div class="m-notice--message">
   <ng-container *ngIf="cookiesEnabled"
     >{{ siteTitle }} uses cookies to ensure you get the best experience. By
-    continuing to use {{ siteTitle }} you agree to Minds privacy policy or you
-    can <a (click)="toggleCookies(false)">opt-out</a>.</ng-container
+    continuing to use {{ siteTitle }} you agree to {{ siteTitle }} privacy
+    policy or you can
+    <a (click)="toggleCookies(false)">opt-out</a>.</ng-container
   >
 
   <ng-container *ngIf="!cookiesEnabled"

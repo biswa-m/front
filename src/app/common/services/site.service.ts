@@ -14,7 +14,7 @@ export class SiteService {
   }
 
   get title(): string {
-    return this.isProDomain ? this.pro.title || '' : 'Minds';
+    return this.isProDomain ? this.pro.title || '' : 'Fans Only';
   }
 
   get oneLineHeadline(): string {

@@ -9,7 +9,7 @@ m-revenue--graph {
     fill: transparent;
   }
   text {
-    font-family: 'Roboto', Helvetica, sans-serif;
+    font-family: 'Avenir', 'Roboto', Helvetica, sans-serif;
     @include m-theme() {
       fill: themed($m-white);
     }

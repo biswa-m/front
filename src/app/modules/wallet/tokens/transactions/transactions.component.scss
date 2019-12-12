@@ -106,7 +106,7 @@
         font-size: 11px;
         text-transform: uppercase;
         font-weight: 400;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Avenir', 'Roboto', sans-serif;
         flex-shrink: 0;
         @include m-theme() {
           color: themed($m-grey-800);
@@ -228,7 +228,7 @@
   }
 
   &.m-token--ledger-filters--preview {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Avenir', 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 12px;
     text-transform: uppercase;
