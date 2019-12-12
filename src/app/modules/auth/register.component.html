@@ -1,59 +1,57 @@
-<section class="m-register--hero">
-  <div class="m-register--hero--video">
-    <video autoplay muted loop *ngIf="!videoError; else fallback">
-      <source
-        [src]="minds.cdn_assets_url + 'assets/videos/what-1/what-1.mp4'"
-        type="video/mp4"
-        (error)="onSourceError()"
-      />
-    </video>
-    <ng-template #fallback>
-      <img [src]="minds.cdn_assets_url + 'assets/photos/cover.png'" />
-    </ng-template>
-  </div>
-  <div class="m-register--hero--inner">
-    <div class="m-register--hero--overlay"></div>
-    <div class="m-register--hero--slogans">
-      <h1 i18n="@@M__SOCIAL_NETWORK_SLOGAN">Where minds gather</h1>
-      <h3 i18n="@@MINDS__HOME__register__LAUNCH_CTA">
-        The leading open source social network for Internet freedom. Earn crypto
-        and free promotion for your contributions.
-      </h3>
+<div class="fo-register">
+  <div class="fo-login-right">
+    <div class="rect left">
+      <img src="{{ minds.cdn_assets_url }}assets/photos/fo-signup-bg1.png" />
+    </div>
+    <div class="rect right">
+      <img src="{{ minds.cdn_assets_url }}assets/photos/fo-signup-bg2.png" />
     </div>
 
-    <div class="m-register--signup" [hidden]="session.isLoggedIn()">
-      <minds-form-register
-        (done)="registered()"
-        [referrer]="referrer"
-        parentId="/register"
-      ></minds-form-register>
+    <div class="right-container">
+      <div class="right-cover">
+        <div class="rect left"></div>
+        <div class="rect right"></div>
+        <div class="brandname mobile">
+          <h3><span class="fans">Fans</span>Only</h3>
+          <p>A community with no boundaries</p>
+        </div>
+      </div>
+
+      <div class="login-box">
+        <div class="brandname web">
+          <h3><span class="fans">Fans</span>Only</h3>
+          <p>A community with no boundaries</p>
+        </div>
+
+        <div class="inputform">
+          <div class="mobile-title"><p>Login</p></div>
+          <minds-form-register
+            (done)="registered()"
+            [referrer]="refferrer"
+            parentId="/register"
+          ></minds-form-register>
+        </div>
+
+        <div>
+          <div class="noaccount">
+            <button class="m-btn" routerLink="/login">
+              Already have an account? Login
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-footer">
+        <div class="mobile">
+          <p>Disclaimers</p>
+        </div>
+
+        <div class="web">
+          <div>Privacy Policy</div>
+          <div>|</div>
+          <div>Cookie Policy</div>
+        </div>
+      </div>
     </div>
   </div>
-</section>
-
-<div class="mdl-grid mdl-grid--no-spacing m-register--footer">
-  <section class="mdl-cell mdl-cell--12-col m-footer">
-    <img [src]="minds.cdn_assets_url + 'assets/logos/logo.svg'" />
-    <ul class="m-footer-nav m-footer-nav-inline">
-      <li
-        *ngFor="let page of navigation.getItems('footer')"
-        class="m-footer-nav-item "
-      >
-        <a
-          *ngIf="page.path && page.path.indexOf('p/') > -1"
-          [routerLink]="[page.path]"
-          >{{ page.title }}</a
-        >
-        <a
-          *ngIf="page.path.indexOf('p/') < 0"
-          [href]="page.path"
-          target="_blank"
-          >{{ page.title }}</a
-        >
-      </li>
-    </ul>
-    <span class="copyright" i18n="@@M__COMMON__COPYRIGHT_YEAR"
-      >&#169; Minds {{ '2019' }}</span
-    >
-  </section>
 </div>
